@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tax Calculator</h1>
+        <!-- Tax Calculator Form -->
+        <form id="taxForm">
+            <!-- Input for Gross Annual Income -->
+            <div class="form-group">
+                <label for="income">Enter gross annual income:</label>
+                <input type="number" id="income" class="form-control" placeholder="Enter gross annual income" required>
+            </div>
+            <!-- Input for Extra Income -->
+            <div class="form-group">
+                <label for="extraIncome">Enter extra income:</label>
+                <input type="number" id="extraIncome" class="form-control" placeholder="Enter extra income from other sources">
+            </div>
+            <!-- Dropdown for Age Group Selection -->
+            <div class="form-group">
+                <label for="age">Select age group:</label>
+                <select id="age" class="form-control" required>
+                    <option value="" selected disabled>Select age group</option>
+                    <option value="<40">&lt;40</option>
+                    <option value=">=40&<60">&ge;40 &lt;60</option>
+                    <option value=">=60">&ge;60</option>
+                </select>
+            </div>
+            <!-- Input for Deductions -->
+            <div class="form-group">
+                <label for="deductions">Enter total deductions:</label>
+                <input type="number" id="deductions" class="form-control" placeholder="Enter total applicable deductions">
+            </div>
+            <!-- Submit Button to Calculate Tax -->
+            <button type="submit" class="btn">Calculate Tax</button>
+        </form>
+
+        <!-- Result Modal -->
+        <div id="resultModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Tax Calculation Result</h2>
+                <p id="taxAmount" class="result"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
